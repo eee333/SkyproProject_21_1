@@ -31,7 +31,7 @@ class GameController:
                 if letter == "D":
                     line_obj.append(Cell(Door()))
                 if letter == "G":
-                    self.unit = Ghost(100, (x, y))
+                    self.unit = Ghost(100, (x, y))  # Создаем героя, но на поле не добавляем.
                     line_obj.append(Cell(Grass()))
                 x += 1
             field_array.append(line_obj)
@@ -39,7 +39,7 @@ class GameController:
         return field_array
 
     def _draw_field(self):
-        os.system('cls')
+        os.system('cls')  # Очистка экрана перед выводом. Не работает в IDE
         y = 0
         unit_coord = self.unit.get_coordinates()
         print(f"Ghost hp: {self.unit.get_hp()}, key: {self.unit.has_key()}")
@@ -49,7 +49,7 @@ class GameController:
             for item in line:
                 item_obj = item.get_obj()
                 if unit_coord == (x, y):
-                    item_class = "Ghost"
+                    item_class = "Ghost"  # Рисуем героя на поле.
                 else:
                     item_class = item_obj.get_terrain()
                 line_str += self.cell_mapping[item_class]
