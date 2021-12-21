@@ -1,5 +1,5 @@
 from game_controller import GameController
-from config import cell_mapping_1
+from config import cell_mapping_1, cell_mapping_2
 
 with open("level.txt", "r", encoding="utf-8") as read_file:
     level_1 = read_file.read()
