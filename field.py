@@ -32,12 +32,6 @@ class Field:
     def get_field(self):  # возвращает свойство field.
         return self.field_array
 
-    def get_cols(self):  # возвращает количество столбцов в поле.
-        pass
-
-    def get_rows(self):  # возвращает количество строк в поле
-        pass
-
 
 class Cell:
     def __init__(self, obj=None):
