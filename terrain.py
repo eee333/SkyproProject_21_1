@@ -25,7 +25,7 @@ class Door(Terrain):
 
 class Key(Terrain):
     def __init__(self):
-        super().__init__(terrain="Key", walkable=True)
+        super().__init__(terrain="Key")
 
     def step_on(self, obj):
         obj.set_key()
@@ -34,7 +34,7 @@ class Key(Terrain):
 
 class Trap(Terrain):
     def __init__(self, damage=10):
-        super().__init__(terrain="Trap", walkable=True)
+        super().__init__(terrain="Trap")
         self.damage = damage
 
     def step_on(self, obj):
@@ -43,7 +43,7 @@ class Trap(Terrain):
 
 class Grass(Terrain):
     def __init__(self):
-        super().__init__(terrain="Grass", walkable=True)
+        super().__init__(terrain="Grass")
 
 
 class Wall(Terrain):
